@@ -1,6 +1,6 @@
 import Hero from "./Hero"
 import Services from "./Services"
-import Header from "./header"
+import Header from "./Header"
 import About from "./About"
 import Contact from "./Contact"
 import Footer from "./Footer"
