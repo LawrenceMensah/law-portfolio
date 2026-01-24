@@ -56,8 +56,8 @@ function Contact() {
           <div className="flex items-center gap-3 py-4">
             <FaWhatsapp className="text-[#004cff] text-3xl mr-2"/>
             <div>
-              <h3 className="text-2xl font-semibold">Location</h3>
-              <span>Accra, Ghana</span>
+              <h3 className="text-2xl font-semibold">WhatsApp</h3>
+              <span>+233 53 690 1532</span>
             </div>
           </div>
         </div>
