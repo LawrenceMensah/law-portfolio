@@ -30,101 +30,101 @@ function About(){
             <div className="w-full grid grid-cols-3 grid-rows-3">
               <div className="p-3">
                 <h3>HTML5</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>PHP</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>Graphic Design</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>CSS3</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>PostgreSQL</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>React</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>JavaScript</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>Tailwind</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
 
               <div className="p-3">
                 <h3>UI/UX Design</h3>
-                <div className="flex text-yellow-400 text-2xl">
+                {/* <div className="flex text-yellow-400 text-2xl">
                   <MdStar />
                   <MdStarHalf />
                   <MdStarBorder/>
                   <MdStarBorder/>
                   <MdStarBorder/>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -97,8 +97,8 @@ function Footer() {
       
       <div className='w-full flex flex-col justify-center-safe items-center-safe bg-[#001954ed]'>
         <hr className='w-[70%] h-1 border-[#e8e8e832] border-t-1 mb-5'/>
-        <span className='font-light text-[13px] mb-1 text-[#ffffffa6]'>© 2026 Lawrence Mensah. All rights reserved.</span>
-        <span className='font-light text-[13px] mb-10 text-[#ffffffa6]'>BSc Information Technology Student @ UPSA</span>
+        <span className='font-light text-[13px] md:text-[15px] mb-1 text-[#ffffffa6]'>© 2026 Lawrence Mensah. All rights reserved.</span>
+        <span className='font-light text-[13px] md:text-[15px] mb-10 text-[#ffffffa6]'>BSc Information Technology Student @ UPSA</span>
       </div>
     </div>
   )
