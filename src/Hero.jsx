@@ -13,7 +13,7 @@ function Hero(){
 
 
   return(
-      <div className="
+      <div id="home" className="
         bg-gradient-to-r
         from-[#002477] from-5%
         via-[#001851] via-30%
