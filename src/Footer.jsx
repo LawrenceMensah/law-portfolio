@@ -16,8 +16,8 @@ function Footer() {
         justify-center-safe
         items-start-safe
         h-auto
-        pt-10
-        pb-10
+        pt-15
+        pb-15
         px-6
         text-[#fff]
         ">
