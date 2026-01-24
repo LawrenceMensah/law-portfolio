@@ -19,7 +19,7 @@ function About(){
         ">
 
           <div>
-            <img src={heroImage} alt="" className="w-50 h-70 md:w-76 md:h-96 border-8 border-[#004cff]"/>
+            <img src={heroImage} alt="" className="w-60 h-60 md:w-96 md:h-96 rounded-full border-8 border-[#004cff]"/>
           </div>
           
           <div className=" w-200 text-[#fff]">
