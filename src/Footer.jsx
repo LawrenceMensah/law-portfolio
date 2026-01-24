@@ -83,7 +83,7 @@ function Footer() {
               <div className="flex items-center gap-0.5">
               <MdEmail size={18} className="text-[#ffffffa6] mr-1"/>
               <div>
-                <span className='text-[#ffffffa6]'>lawrencekwekumensah2005@gmail.com</span>
+                <span className='text-[#ffffffa6]'>mrlaw255@gmail.com</span>
               </div>
             </div>
             </ol>

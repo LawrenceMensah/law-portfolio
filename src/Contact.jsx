@@ -49,7 +49,7 @@ function Contact() {
             <MdEmail size={28} className="text-[#004cff] mr-2"/>
             <div>
               <h3 className="text-2xl font-semibold">Email</h3>
-              <span>lawrencekwekumensah2005@gmail.com</span>
+              <span>mrlaw255@gmail.com</span>
             </div>
           </div>
 
