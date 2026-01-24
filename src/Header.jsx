@@ -139,10 +139,10 @@ function Header(){
         bg-[#000d2b]
         uppercase
       ">
-        <a href="#" className="text-white" onClick={() => setIsOpen(false)}>Home</a>
-        <a href="#" className="text-white" onClick={() => setIsOpen(false)}>Services</a>
-        <a href="#" className="text-white" onClick={() => setIsOpen(false)}>About</a>
-        <a href="#" className="text-white" onClick={() => setIsOpen(false)}>Contact</a>
+        <a href="#home" className="text-white" onClick={() => setIsOpen(false)}>Home</a>
+        <a href="#services" className="text-white" onClick={() => setIsOpen(false)}>Services</a>
+        <a href="#about" className="text-white" onClick={() => setIsOpen(false)}>About</a>
+        <a href="#contact" className="text-white" onClick={() => setIsOpen(false)}>Contact</a>
 
         <a
           href="#"
