@@ -6,8 +6,9 @@ function About(){
 
 
   return(
-      <div className="
+      <div id="about" className="
         bg-[#001954ed]
+        scroll-mt-24
         flex
         flex-wrap
         gap-10

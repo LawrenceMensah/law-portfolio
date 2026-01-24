@@ -18,6 +18,7 @@ function Hero(){
         from-[#002477] from-5%
         via-[#001851] via-30%
         to-[#000d2b] to-100%
+        scroll-mt-24
         h-auto
         flex
         flex-col-reverse

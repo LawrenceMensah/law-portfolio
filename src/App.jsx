@@ -12,10 +12,10 @@ function App() {
   return (
     <>
       <Header/>
-      <Hero id="home" className="scroll-mt-24"/>
-      <Services id="services" className="scroll-mt-24"/>
-      <About id="about" className="scroll-mt-24"/>
-      <Contact id="contact" className="scroll-mt-24"/>
+      <Hero />
+      <Services />
+      <About />
+      <Contact />
       <Footer/>
     </>
   )

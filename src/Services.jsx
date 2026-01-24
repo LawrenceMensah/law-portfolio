@@ -9,7 +9,7 @@ import Counter from "./Counter";
 
 function Services() {
   return(
-    <div className="bg-[#e6edfd] h-auto px-7 py-15 flex-col">
+    <div id="services" className="bg-[#e6edfd] h-auto px-7 py-15 flex-col scroll-mt-24">
       <div className="w-full flex justify-center-safe py-1.5">
         <h1 className="text-3xl text-[#004cff] mb-4 text-center md:text-left font-bold uppercase">Our Services</h1>
       </div>

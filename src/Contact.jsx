@@ -9,7 +9,7 @@ import { FaWhatsapp, FaGithub, FaInstagram } from 'react-icons/fa';
 
 function Contact() {
   return(
-    <div className="bg-[#e6edfd] pt-8">
+    <div id="contact" className="bg-[#e6edfd] pt-8 scroll-mt-24">
       <div className="w-full flex justify-center-safe py-1.5">
         <h1 className="text-3xl text-[#004cff] mb-4 text-center md:text-left font-bold uppercase">Contact Me</h1>
       </div>
