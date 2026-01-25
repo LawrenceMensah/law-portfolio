@@ -25,7 +25,7 @@ Error generating stack: `+e.message+`
         from-[#002477] from-5%\r
         via-[#001851] via-30%\r
         to-[#000d2b] to-100% sticky top-0 z-1 py-2\r
-        backdrop-blur-none\r
+        backdrop-blur-sm\r
         \`\${\r
       scrolled\r
         ? 'bg-[#000d2b]/90 backdrop-blur-md shadow-lg'\r
