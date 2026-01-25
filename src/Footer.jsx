@@ -44,9 +44,9 @@ function Footer() {
           <h3 className='text-lg font-bold'>Quick Links</h3>
           <ul className='text-[#ffffffa6]'>
             <a href="#home"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Home</ol></a>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Services</ol>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">About Me</ol>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Contact</ol>
+            <a href="#services"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Services</ol></a>
+            <a href="#about"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">About</ol></a>
+            <a href="#contact"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Contact</ol></a>
           </ul>
         </div>
 
