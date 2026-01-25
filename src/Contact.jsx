@@ -25,7 +25,7 @@ function Contact() {
         pt-8
         px-6
         ">
-      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-[#fff] transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#0034ac] hover:border-1">
+      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-[#fff] transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#004cff] hover:border-1">
         <h2 className="text-3xl text-[#004cff] mt-3 mb-1 font-semibold uppercase">Get In Touch</h2>
         <span className="w-full">I'm open to internship opportunities, collaborative projects, and technical discussions about frontend, backend systems, database design, graphic design and more.</span>
         <div>
@@ -64,7 +64,7 @@ function Contact() {
 
       </div>
 
-      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-[#fff] transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#0034ac] hover:border-1">
+      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-[#fff] transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#004cff] hover:border-1">
         <h2 className="text-3xl text-[#004cff] mt-3 mb-1 font-semibold uppercase">Send a Message</h2>
           <form action="">
             <label htmlFor="">Your Name</label><br />
