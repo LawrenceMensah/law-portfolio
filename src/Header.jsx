@@ -20,7 +20,7 @@ function Header(){
         from-[#002477] from-5%
         via-[#001851] via-30%
         to-[#000d2b] to-100% sticky top-0 z-1 py-2
-        backdrop-blur-sm
+        backdrop-blur-md
         `${
       scrolled
         ? 'bg-[#000d2b]/90 backdrop-blur-md shadow-lg'
