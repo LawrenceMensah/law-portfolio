@@ -16,17 +16,17 @@ function Header(){
   }, []);
 
   return(
-    <header className="bg-gradient-to-r
+    <header className={`bg-linear-to-r
         from-[#002477] from-5%
         via-[#001851] via-30%
         to-[#000d2b] to-100% sticky top-0 z-1 py-2
         backdrop-blur-md
-        `${
+        ${
       scrolled
         ? 'bg-[#000d2b]/90 backdrop-blur-md shadow-lg'
         : 'bg-transparent'
-    }`
-        ">
+    }
+        `}>
 
           <button onClick={() => setIsOpen(!isOpen)} className="text-white text-3xl ml-3 mt-3 md:hidden">
             {isOpen ? <MdClose /> : <MdMenu />}
@@ -44,7 +44,7 @@ function Header(){
           after:-translate-x-1/2
           after:bottom-0
           after:w-full
-          after:h-[2px]
+          after:h-0.5
           after:bg-white
           after:scale-x-0
           after:transition-transform
@@ -63,7 +63,7 @@ function Header(){
           after:-translate-x-1/2
           after:bottom-0
           after:w-full
-          after:h-[2px]
+          after:h-0.5
           after:bg-white
           after:scale-x-0
           after:transition-transform
@@ -82,7 +82,7 @@ function Header(){
           after:-translate-x-1/2
           after:bottom-0
           after:w-full
-          after:h-[2px]
+          after:h-0.5
           after:bg-white
           after:scale-x-0
           after:transition-transform
@@ -101,7 +101,7 @@ function Header(){
           after:-translate-x-1/2
           after:bottom-0
           after:w-full
-          after:h-[2px]
+          after:h-0.5
           after:bg-white
           after:scale-x-0
           after:transition-transform

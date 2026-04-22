@@ -7,9 +7,51 @@ import {
 
 import { FaWhatsapp, FaGithub, FaInstagram } from 'react-icons/fa';
 
+// Import from supabase
+import { supabase } from "./supabaseClient";
+// Import from React(UseState)
+import { useState } from "react";
+// Hot toast
+import { Toaster, toast } from "react-hot-toast";
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    messages: ""
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { error } = await supabase
+    .from("Messages")
+    .insert([formData]);
+
+    if (error) {
+      console.log(error);
+      toast.error("Failed to send message");
+    } else {
+      toast.success("Message sent successfully");
+
+      setFormData({
+        name: "",
+        email: "",
+        messages: ""
+      });
+    }
+  }
+
+  function handleFormData(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  }
+
   return(
     <div id="contact" className="bg-[#e6edfd] pt-8 scroll-mt-24">
+      <Toaster position="top-center" />
       <div className="w-full flex justify-center-safe py-1.5">
         <h1 className="text-3xl text-[#004cff] mb-4 text-center md:text-left font-bold uppercase">Contact Me</h1>
       </div>
@@ -64,19 +106,19 @@ function Contact() {
 
       </div>
 
-      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-[#fff] transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#004cff] hover:border-1">
+      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-white transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#004cff] hover:border-1">
         <h2 className="text-3xl text-[#004cff] mt-3 mb-1 font-semibold uppercase">Send a Message</h2>
-          <form action="">
+          <form action="" onSubmit={handleSubmit}>
             <label htmlFor="">Your Name</label><br />
-            <input type="text" placeholder="Enter your name here" className="w-full border-1 border-[#41414173] px-2 py-2 rounded-lg mb-7"/>
+            <input type="text" name="name" value={formData.name} onChange={handleFormData} placeholder="Enter your name here" className="w-full border border-[#41414173] px-2 py-2 rounded-lg mb-7"/>
 
             <label htmlFor="">Email</label><br />
-            <input type="text" placeholder="Enter your email here" className="w-full border-1 border-[#41414173] px-2 py-2 rounded-lg mb-7"/>
+            <input type="text" name="email" value={formData.email} onChange={handleFormData} placeholder="Enter your email here" className="w-full border border-[#41414173] px-2 py-2 rounded-lg mb-7"/>
 
             <label htmlFor="">Message</label><br />
-            <textarea name="" id="" placeholder="Enter your message" className="w-full border-1 border-[#41414173] px-2 py-2 rounded-lg mb-7 h-35"></textarea>
+            <textarea name="messages" value={formData.messages} onChange={handleFormData} id="" placeholder="Enter your message" className="w-full border border-[#41414173] px-2 py-2 rounded-lg mb-7 h-35"></textarea>
 
-            <button className="bg-[#004cff] text-[#fff] py-3 px-5 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl transition delay-150 duration-300 hover:translate-x-1">
+            <button type="submit" className="bg-[#004cff] text-white py-3 px-5 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl transition delay-150 duration-300 hover:translate-x-1">
               Send Message<MdSend/>
             </button>
           </form>
