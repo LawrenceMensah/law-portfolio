@@ -14,7 +14,7 @@ function Services() {
         <h1 className="text-4xl md:text-5xl text-white font-bold uppercase tracking-tight">Our Services</h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 text-gray-300">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8 text-gray-300">
 
         <div className="group bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
           <div className="bg-blue-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition">
@@ -47,7 +47,7 @@ function Services() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center py-20 border-t border-gray-700 mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center py-20 border-t border-gray-700 mt-12">
       
       <div>
         <h2 className="text-6xl md:text-7xl font-bold text-blue-500">

@@ -25,7 +25,7 @@ function About(){
           </div>
 
           {/* Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Image Section */}
             <div className="flex justify-center">
               <div className="relative group">
@@ -54,9 +54,9 @@ function About(){
                   {skills.map((skill, index) => (
                     <div 
                       key={index}
-                      className="bg-gray-900 border border-gray-800 hover:border-blue-500/50 rounded-lg p-4 transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:shadow-blue-600/20 group cursor-pointer"
+                      className="bg-gray-900 border border-gray-800 hover:border-blue-500/50 rounded-lg p-3 sm:p-4 transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:shadow-blue-600/20 group cursor-pointer"
                     >
-                      <p className="text-white font-semibold group-hover:text-blue-400 transition-colors duration-300">
+                      <p className="text-white text-sm sm:text-base font-semibold group-hover:text-blue-400 transition-colors duration-300 break-words">
                         {skill.name}
                       </p>
                       <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors duration-300">
