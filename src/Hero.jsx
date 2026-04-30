@@ -1,4 +1,4 @@
-﻿import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import heroImage from "./assets/MyImage.jpeg";
 import { FaWhatsapp, FaGithub, FaInstagram } from 'react-icons/fa';
 import { MdArrowForward } from "react-icons/md";
@@ -35,12 +35,12 @@ function Hero(){
                 Crafting digital experiences that work. I'm <span className="text-white font-semibold">Mensah Lawrence</span>, a <span className="text-white font-semibold">Junior Front-end Developer</span> focused on building clean, user-centric products that solve real-world problems.
               </p>
 
-              <div className="flex gap-6 flex-wrap justify-center md:justify-start items-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-7 rounded-lg flex justify-center items-center gap-2 font-semibold transition-all duration-300 group">
+              <div className="flex gap-4 md:gap-6 justify-center md:justify-start items-center">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-5 sm:px-7 rounded-lg flex justify-center items-center gap-2 font-semibold transition-all duration-300 group whitespace-nowrap">
                   Get In Touch <MdArrowForward size={18} className="group-hover:translate-x-1 transition" />
                 </button>
 
-                <div className="flex gap-3">
+                <div className="flex gap-2 sm:gap-3">
                   <a href="https://wa.me/0536901562" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
                     <FaWhatsapp color="#fff" size={20}/>
                   </a>
