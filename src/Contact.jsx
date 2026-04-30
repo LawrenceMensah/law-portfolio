@@ -50,78 +50,167 @@ function Contact() {
   }
 
   return(
-    <div id="contact" className="bg-[#e6edfd] pt-8 scroll-mt-24">
+    <div id="contact" className="bg-black pt-20 pb-20 scroll-mt-24">
       <Toaster position="top-center" />
-      <div className="w-full flex justify-center-safe py-1.5">
-        <h1 className="text-3xl text-[#004cff] mb-4 text-center md:text-left font-bold uppercase">Contact Me</h1>
-      </div>
-      <div className="
-        bg-[#e6edfd]
-        flex
-        flex-wrap
-        gap-6
-        justify-center-safe
-        items-start-safe
-        h-auto
-        py-15
-        pt-8
-        px-6
-        ">
-      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-[#fff] transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#004cff] hover:border-1">
-        <h2 className="text-3xl text-[#004cff] mt-3 mb-1 font-semibold uppercase">Get In Touch</h2>
-        <span className="w-full">I'm open to internship opportunities, collaborative projects, and technical discussions about frontend, backend systems, database design, graphic design and more.</span>
-        <div>
-          <div className="flex items-center gap-3  py-4">
-            <MdLocationOn size={28}  className="text-[#004cff] mr-2"/>
-            <div>
-              <h3 className="text-2xl font-semibold">Location</h3>
-              <span>Accra, Ghana</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 py-4">
-            <MdPhone size={28} className="text-[#004cff] mr-2"/>
-            <div>
-              <h3 className="text-2xl font-semibold">Phone</h3>
-              <span>+233 53 690 1532</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 py-4">
-            <MdEmail size={28} className="text-[#004cff] mr-2"/>
-            <div>
-              <h3 className="text-2xl font-semibold">Email</h3>
-              <span>mrlaw255@gmail.com</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 py-4">
-            <FaWhatsapp className="text-[#004cff] text-3xl mr-2"/>
-            <div>
-              <h3 className="text-2xl font-semibold">WhatsApp</h3>
-              <span>+233 53 690 1532</span>
-            </div>
-          </div>
+      
+      <div className="max-w-6xl mx-auto px-6 md:px-20">
+        {/* Header */}
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl text-white font-bold uppercase mb-2">Get In Touch</h1>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
         </div>
 
-      </div>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          
+          {/* Contact Info Card */}
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20 h-full">
+            <h2 className="text-2xl text-blue-400 font-semibold uppercase mb-6">Contact Information</h2>
+            <p className="text-gray-400 mb-8 leading-relaxed">
+              I'm open to internship opportunities, collaborative projects, and technical discussions about frontend, backend systems, database design, graphic design and more.
+            </p>
 
-      <div className="w-140 text-[#414141] shadow-2xl shadow-[#3333333d] p-7 rounded-2xl bg-white transition delay-150 duration-300 hover:-translate-y-1 hover:border-[#004cff] hover:border-1">
-        <h2 className="text-3xl text-[#004cff] mt-3 mb-1 font-semibold uppercase">Send a Message</h2>
-          <form action="" onSubmit={handleSubmit}>
-            <label htmlFor="">Your Name</label><br />
-            <input type="text" name="name" value={formData.name} onChange={handleFormData} placeholder="Enter your name here" className="w-full border border-[#41414173] px-2 py-2 rounded-lg mb-7"/>
+            {/* Contact Items */}
+            <div className="space-y-6">
+              {/* Location */}
+              <div className="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                <div className="flex-shrink-0">
+                  <MdLocationOn size={24} className="text-blue-500 mt-1"/>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Location</h3>
+                  <p className="text-gray-400 mt-1">Accra, Ghana</p>
+                </div>
+              </div>
 
-            <label htmlFor="">Email</label><br />
-            <input type="text" name="email" value={formData.email} onChange={handleFormData} placeholder="Enter your email here" className="w-full border border-[#41414173] px-2 py-2 rounded-lg mb-7"/>
+              {/* Phone */}
+              <div className="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                <div className="flex-shrink-0">
+                  <MdPhone size={24} className="text-blue-500 mt-1"/>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Phone</h3>
+                  <p className="text-gray-400 mt-1">+233 53 690 1532</p>
+                </div>
+              </div>
 
-            <label htmlFor="">Message</label><br />
-            <textarea name="messages" value={formData.messages} onChange={handleFormData} id="" placeholder="Enter your message" className="w-full border border-[#41414173] px-2 py-2 rounded-lg mb-7 h-35"></textarea>
+              {/* Email */}
+              <div className="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                <div className="flex-shrink-0">
+                  <MdEmail size={24} className="text-blue-500 mt-1"/>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Email</h3>
+                  <p className="text-gray-400 mt-1">mrlaw255@gmail.com</p>
+                </div>
+              </div>
 
-            <button type="submit" className="bg-[#004cff] text-white py-3 px-5 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl transition delay-150 duration-300 hover:translate-x-1">
-              Send Message<MdSend/>
-            </button>
-          </form>
+              {/* WhatsApp */}
+              <div className="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                <div className="flex-shrink-0">
+                  <FaWhatsapp size={24} className="text-blue-500 mt-1"/>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">WhatsApp</h3>
+                  <p className="text-gray-400 mt-1">+233 53 690 1532</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-8 pt-8 border-t border-gray-800">
+              <p className="text-gray-400 text-sm uppercase font-semibold mb-4">Follow Me</p>
+              <div className="flex gap-4">
+                <a 
+                  href="https://wa.me/0536901562" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="bg-gray-800 hover:bg-blue-600 text-white h-10 w-10 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110"
+                >
+                  <FaWhatsapp size={18}/>
+                </a>
+                <a 
+                  href="https://github.com/LawrenceMensah" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="bg-gray-800 hover:bg-blue-600 text-white h-10 w-10 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110"
+                >
+                  <FaGithub size={18}/>
+                </a>
+                <a 
+                  href="https://www.instagram.com" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="bg-gray-800 hover:bg-blue-600 text-white h-10 w-10 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110"
+                >
+                  <FaInstagram size={18}/>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form Card */}
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20 h-full flex flex-col">
+            <h2 className="text-2xl text-blue-400 font-semibold uppercase mb-6">Send a Message</h2>
+            
+            <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+              {/* Name Field */}
+              <div className="mb-5">
+                <label htmlFor="name" className="block text-white font-semibold mb-2 text-sm uppercase">
+                  Your Name
+                </label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  id="name"
+                  value={formData.name} 
+                  onChange={handleFormData} 
+                  placeholder="Enter your name" 
+                  className="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg focus:border-blue-500 focus:outline-none transition-colors duration-300 placeholder-gray-500"
+                />
+              </div>
+
+              {/* Email Field */}
+              <div className="mb-5">
+                <label htmlFor="email" className="block text-white font-semibold mb-2 text-sm uppercase">
+                  Email
+                </label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email"
+                  value={formData.email} 
+                  onChange={handleFormData} 
+                  placeholder="Enter your email" 
+                  className="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg focus:border-blue-500 focus:outline-none transition-colors duration-300 placeholder-gray-500"
+                />
+              </div>
+
+              {/* Message Field */}
+              <div className="mb-4 flex-1 flex flex-col">
+                <label htmlFor="messages" className="block text-white font-semibold mb-2 text-sm uppercase">
+                  Message
+                </label>
+                <textarea 
+                  name="messages" 
+                  id="messages"
+                  value={formData.messages} 
+                  onChange={handleFormData} 
+                  placeholder="Enter your message" 
+                  rows="5"
+                  className="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg focus:border-blue-500 focus:outline-none transition-colors duration-300 placeholder-gray-500 resize-none flex-1"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <button 
+                type="submit" 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg flex justify-center items-center gap-2 uppercase transition-all duration-300"
+              >
+                Send Message <MdSend size={18}/>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

@@ -2,105 +2,152 @@ import { FaWhatsapp, FaGithub, FaInstagram } from 'react-icons/fa';
 import {
   MdLocationOn,
   MdPhone,
-  MdEmail
+  MdEmail,
+  MdArrowForward
 } from "react-icons/md";
 
 function Footer() {
+  const quickLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" }
+  ];
+
+  const services = [
+    "Web Development",
+    "Graphic Design",
+    "UI/UX Design"
+  ];
+
   return(
-    <div className="bg-[#001954ed]">
-      <div className="
-        bg-[#001954ed]
-        flex
-        flex-wrap
-        gap-10
-        justify-center-safe
-        items-start-safe
-        h-auto
-        pt-15
-        pb-15
-        px-6
-        text-[#fff]
-        ">
+    <footer className="bg-black border-t border-gray-800">
+      <div className="max-w-6xl mx-auto px-6 md:px-20 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+          
+          {/* Brand Section */}
+          <div className="lg:col-span-2">
+            <div className="mb-6">
+              <h2 className='text-3xl font-bold text-white mb-2'>Lawrence Mensah</h2>
+              <p className='text-gray-400 text-sm leading-relaxed'>Crafting future-ready technology and beautiful digital experiences through clean code and innovative design.</p>
+            </div>
 
-        <div className='w-full md:w-auto'>
-          <div className='h-25'>
-            <h2 className='text-3xl font-bold mb-3'>Lawrence Mensah</h2>
-            <span className='mb-3 text-[#ffffffa6]'>Crafting future-ready technology today.</span>
+            {/* Social Links */}
+            <div className="flex gap-3 mt-6">
+              <a 
+                href="https://wa.me/0536901562" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="bg-gray-800 hover:bg-blue-600 text-white h-10 w-10 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp size={18}/>
+              </a>
+              <a 
+                href="https://github.com/LawrenceMensah" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="bg-gray-800 hover:bg-blue-600 text-white h-10 w-10 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110"
+                aria-label="GitHub"
+              >
+                <FaGithub size={18}/>
+              </a>
+              <a 
+                href="https://www.instagram.com" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="bg-gray-800 hover:bg-blue-600 text-white h-10 w-10 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={18}/>
+              </a>
+            </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            
-            <span className="flex gap-2 justify-start-safe items-center-safe">
-            <a href="https://wa.me/0536901562" target="_blank" className="bg-[#25D366] border-2 border-white h-10 w-10 rounded-full flex justify-center-safe items-center-safe transition delay-150 duration-300 hover:-translate-y-0.5"><FaWhatsapp color="#fff" className="text-1xl"/></a>
+            <h3 className='text-lg font-bold text-white mb-6 flex items-center gap-2'>
+              Quick Links
+              <div className='h-0.5 w-8 bg-blue-500 rounded'></div>
+            </h3>
+            <ul className='space-y-3'>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href}
+                    className='text-gray-400 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2 group'
+                  >
+                    <span className='group-hover:translate-x-1 transition-transform duration-300'>{link.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <a href="https://github.com/LawrenceMensah" target="_blank" className="bg-[#333] border-2 border-white h-10 w-10 rounded-full flex justify-center-safe items-center-safe transition delay-150 duration-300 hover:-translate-y-0.5"><FaGithub color="#fff" className="text-1xl"/></a>
+          {/* Services */}
+          <div>
+            <h3 className='text-lg font-bold text-white mb-6 flex items-center gap-2'>
+              Services
+              <div className='h-0.5 w-8 bg-blue-500 rounded'></div>
+            </h3>
+            <ul className='space-y-3'>
+              {services.map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href="#services"
+                    className='text-gray-400 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2 group'
+                  >
+                    <span className='group-hover:translate-x-1 transition-transform duration-300'>{service}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <a href="https://wa.me/0536901562" target="_blank" className="bg-[#C13584] border-2 border-white h-10 w-10 rounded-full flex justify-center-safe items-center-safe transition delay-150 duration-300 hover:-translate-y-0.5"> <FaInstagram color="#fff" className="text-1xl"/></a>
-            </span>
+          {/* Contact Info */}
+          <div>
+            <h3 className='text-lg font-bold text-white mb-6 flex items-center gap-2'>
+              Contact
+              <div className='h-0.5 w-8 bg-blue-500 rounded'></div>
+            </h3>
+            <ul className='space-y-4'>
+              <li className='flex items-start gap-3'>
+                <MdLocationOn size={18} className='text-blue-500 mt-0.5 flex-shrink-0'/>
+                <span className='text-gray-400 text-sm'>Accra, Ghana</span>
+              </li>
+              <li className='flex items-start gap-3'>
+                <MdPhone size={18} className='text-blue-500 mt-0.5 flex-shrink-0'/>
+                <span className='text-gray-400 text-sm'>+233 53 690 1532</span>
+              </li>
+              <li className='flex items-start gap-3'>
+                <MdEmail size={18} className='text-blue-500 mt-0.5 flex-shrink-0'/>
+                <span className='text-gray-400 text-sm'>mrlaw255@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className='w-full md:w-60'>
-          <h3 className='text-lg font-bold'>Quick Links</h3>
-          <ul className='text-[#ffffffa6]'>
-            <a href="#home"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Home</ol></a>
-            <a href="#services"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Services</ol></a>
-            <a href="#about"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">About</ol></a>
-            <a href="#contact"><ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Contact</ol></a>
-          </ul>
-        </div>
-
-        <div className='w-full md:w-60'>
-          <h3 className='text-lg font-bold'>Services</h3>
-          <ul className='text-[#ffffffa6]'>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Web Development</ol>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">Graphic Design</ol>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">UI/UX Design</ol>
-            
-          </ul>
-        </div>
-
-        <div className='w-full md:w-86'>
-          <h3 className='text-lg font-bold'>Contact Info</h3>
-          <ul>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">
-              <div className="flex items-center gap-0.5">
-                          <MdLocationOn size={18}  className="text-[#ffffffa6] mr-1"/>
-                          <div>
-                            <span className='text-[#ffffffa6]'>Accra, Ghana</span>
-                          </div>
-                        </div>
-            </ol>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">
-              <div className="flex items-center gap-0.5">
-              <MdPhone size={18} className="text-[#ffffffa6] mr-1"/>
-              <div>
-                <span className='text-[#ffffffa6]'>+233 53 690 1532</span>
-              </div>
+        {/* Divider */}
+        <div className='border-t border-gray-800 pt-8'>
+          {/* Footer Bottom */}
+          <div className='flex flex-col md:flex-row justify-between items-center text-center md:text-left'>
+            <div className='space-y-1'>
+              <p className='text-gray-400 text-sm'>© 2026 Lawrence Mensah. All rights reserved.</p>
+              <p className='text-gray-500 text-xs'>BSc Information Technology Student @ UPSA</p>
             </div>
-            </ol>
-            <ol className="py-2 transition delay-150 duration-300 hover:translate-x-1">
-              <div className="flex items-center gap-0.5">
-              <MdEmail size={18} className="text-[#ffffffa6] mr-1"/>
-              <div>
-                <span className='text-[#ffffffa6]'>mrlaw255@gmail.com</span>
-              </div>
+            <div className='mt-4 md:mt-0'>
+              <a 
+                href="#home"
+                className='inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors duration-300 text-sm font-semibold'
+              >
+                Back to Top
+                <MdArrowForward size={16}/>
+              </a>
             </div>
-            </ol>
-          </ul>
+          </div>
         </div>
-
-        
-
       </div>
-
-      
-      <div className='w-full flex flex-col justify-center-safe items-center-safe bg-[#001954ed]'>
-        <hr className='w-[70%] h-1 border-[#e8e8e832] border-t-1 mb-5'/>
-        <span className='font-light text-[13px] md:text-[15px] mb-1 text-[#ffffffa6]'>© 2026 Lawrence Mensah. All rights reserved.</span>
-        <span className='font-light text-[13px] md:text-[15px] mb-10 text-[#ffffffa6]'>BSc Information Technology Student @ UPSA</span>
-      </div>
-    </div>
+    </footer>
   )
 }
 

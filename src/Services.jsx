@@ -9,59 +9,65 @@ import Counter from "./Counter";
 
 function Services() {
   return(
-    <div id="services" className="bg-[#e6edfd] h-auto px-7 py-15 flex-col scroll-mt-24">
-      <div className="w-full flex justify-center-safe py-1.5">
-        <h1 className="text-3xl text-[#004cff] mb-4 text-center md:text-left font-bold uppercase">Our Services</h1>
+    <div id="services" className="bg-gray-900 h-auto px-6 md:px-20 py-20 flex-col scroll-mt-24">
+      <div className="w-full flex justify-center md:justify-start py-4 mb-12">
+        <h1 className="text-4xl md:text-5xl text-white font-bold uppercase tracking-tight">Our Services</h1>
       </div>
 
-      <div className="flex flex-wrap justify-center-safe gap-7 py-5 text-[#414141]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 text-gray-300">
 
-        <div className="w-110 p-4 rounded-2xl border-t-6 border-[#004cff] transition delay-150 duration-300 ease-in-out shadow-lg hover:scale-102 hover:shadow-lg hover:shadow-[#3333333d] bg-white">
-          <MdCode size={60} className="mb-3 p-1 text-[#004cff] rounded-xl"/>
-          <h3 className="text-2xl font-bold mb-0.5 uppercase">Web Development</h3>
-          <p>We build high-performance, responsive websites using the latest modern frameworks. Our focus is on writing clean, scalable code that ensures your site is fast, secure, and ready to grow alongside your business. </p>
+        <div className="group bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+          <div className="bg-blue-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition">
+            <MdCode size={32} className="text-blue-500"/>
+          </div>
+          <h3 className="text-2xl font-bold mb-3 uppercase text-white">Web Development</h3>
+          <p className="text-gray-400 text-sm mb-6 leading-relaxed">We build high-performance, responsive websites using the latest modern frameworks. Our focus is on writing clean, scalable code that ensures your site is fast, secure, and ready to grow alongside your business.</p>
 
-          <button className="bg-[#004cff] text-[#fff] py-2.5 px-4 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl text-[10px] mt-4 transition delay-150 duration-300 hover:translate-x-1">See More <MdArrowForward size={16} /></button>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-5 rounded-lg flex items-center gap-2 font-semibold text-sm mt-6 transition-all duration-300">See More <MdArrowForward size={16} /></button>
         </div>
 
-        <div className="w-110 p-4 rounded-2xl border-t-6 border-[#004cff] transition delay-150 duration-300 ease-in-out shadow-lg hover:scale-102 hover:shadow-lg hover:shadow-[#3333333d] bg-white">
-          <MdBrush size={60} className="mb-3 p-1 text-[#004cff] rounded-xl"/>
-          <h3 className="text-2xl font-bold mb-0.5 uppercase">Graphic Design</h3>
-          <p>Transform your brand with strategic visuals that capture attention and build trust. We create cohesive brand identities and marketing materials designed to leave a professional, lasting impression on your audience. </p>
+        <div className="group bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+          <div className="bg-blue-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition">
+            <MdBrush size={32} className="text-blue-500"/>
+          </div>
+          <h3 className="text-2xl font-bold mb-3 uppercase text-white">Graphic Design</h3>
+          <p className="text-gray-400 text-sm mb-6 leading-relaxed">Transform your brand with strategic visuals that capture attention and build trust. We create cohesive brand identities and marketing materials designed to leave a professional, lasting impression on your audience.</p>
 
-          <button className="bg-[#004cff] text-[#fff] py-2.5 px-4 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl text-[10px] mt-4 transition delay-150 duration-300 hover:translate-x-1">See More <MdArrowForward size={16} /></button>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-5 rounded-lg flex items-center gap-2 font-semibold text-sm mt-6 transition-all duration-300">See More <MdArrowForward size={16} /></button>
         </div>
 
-        <div className="w-110 p-4 rounded-2xl border-t-6 border-[#004cff] transition delay-150 duration-300 ease-in-out shadow-lg hover:scale-102 hover:shadow-lg hover:shadow-[#3333333d] bg-white">
-          <MdDesignServices size={60} className="mb-3 p-1 text-[#004cff] rounded-xl"/>
-          <h3 className="text-2xl font-bold mb-0.5 uppercase">UI/UX Design</h3>
-          <p>We design intuitive digital experiences that put your users first. By blending research with beautiful interface design, we turn complex interactions into seamless journeys that drive engagement and satisfaction. </p>
+        <div className="group bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+          <div className="bg-blue-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition">
+            <MdDesignServices size={32} className="text-blue-500"/>
+          </div>
+          <h3 className="text-2xl font-bold mb-3 uppercase text-white">UI/UX Design</h3>
+          <p className="text-gray-400 text-sm mb-6 leading-relaxed">We design intuitive digital experiences that put your users first. By blending research with beautiful interface design, we turn complex interactions into seamless journeys that drive engagement and satisfaction.</p>
 
-          <button className="bg-[#004cff] text-[#fff] py-2.5 px-4 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl text-[10px] mt-4 transition delay-150 duration-300 hover:translate-x-1">See More <MdArrowForward size={16} /></button>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-5 rounded-lg flex items-center gap-2 font-semibold text-sm mt-6 transition-all duration-300">See More <MdArrowForward size={16} /></button>
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center-safe gap-25 text-center py-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center py-20 border-t border-gray-700 mt-12">
       
-      <div className="w-full md:w-auto">
-        <h2 className="text-6xl font-bold text-[#004cff]">
+      <div>
+        <h2 className="text-6xl md:text-7xl font-bold text-blue-500">
           <Counter end={25} />+
         </h2>
-        <p className="text-[#414141]">Projects Completed</p>
+        <p className="text-gray-400 text-lg mt-2">Projects Completed</p>
       </div>
 
-      <div className="w-full md:w-auto">
-        <h2 className="text-6xl font-bold text-[#004cff]">
+      <div>
+        <h2 className="text-6xl md:text-7xl font-bold text-blue-500">
           <Counter end={3} />+
         </h2>
-        <p className="text-[#414141]">Years Experience</p>
+        <p className="text-gray-400 text-lg mt-2">Years Experience</p>
       </div>
 
-      <div className="w-full md:w-auto">
-        <h2 className="text-6xl font-bold text-[#004cff]">
+      <div>
+        <h2 className="text-6xl md:text-7xl font-bold text-blue-500">
           <Counter end={12} />+
         </h2>
-        <p className="text-[#414141]">Happy Clients</p>
+        <p className="text-gray-400 text-lg mt-2">Happy Clients</p>
       </div>
 
     </div>

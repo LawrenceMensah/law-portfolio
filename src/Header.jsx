@@ -16,145 +16,69 @@ function Header(){
   }, []);
 
   return(
-    <header className={`bg-linear-to-r
-        from-[#002477] from-5%
-        via-[#001851] via-30%
-        to-[#000d2b] to-100% sticky top-0 z-1 py-2
-        backdrop-blur-md
+    <>
+      <header className={`fixed top-0 left-0 w-full z-40 py-4 px-6 transition-all duration-300
         ${
       scrolled
-        ? 'bg-[#000d2b]/90 backdrop-blur-md shadow-lg'
-        : 'bg-transparent'
+        ? 'bg-black/80 backdrop-blur-lg shadow-lg border-b border-gray-800'
+        : 'bg-black border-b border-gray-800/30'
     }
         `}>
+      
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
+        {/* Logo - Left */}
+        <div className="flex-none">
+          <a href="#" className="flex items-center">
+            <h1 className="text-3xl font-black tracking-tight text-white drop-shadow-md">
+              Lawre<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">X</span>
+            </h1>
+          </a>
+        </div>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white text-3xl ml-3 mt-3 md:hidden">
-            {isOpen ? <MdClose /> : <MdMenu />}
-          </button>
+        {/* Desktop Navigation - Center */}
+        <nav className="hidden md:flex justify-center items-center gap-10 flex-1">
+          <a href="#home" className="relative text-gray-300 hover:text-white text-sm font-medium transition
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-blue-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
+          >HOME</a>
 
-      <nav className="hidden md:flex justify-center-safe items-center-safe gap-8 uppercase py-1">
-        <a href="#home" className="
-          relative
-         text-white
-          hover:text-white
-          backdrop-sepia-0
-          after:content-['']
-          after:absolute
-          after:left-1/2
-          after:-translate-x-1/2
-          after:bottom-0
-          after:w-full
-          after:h-0.5
-          after:bg-white
-          after:scale-x-0
-          after:transition-transform
-          after:duration-300
-          hover:after:scale-x-100
-          "
-       >Home</a>
+          <a href="#services" className="relative text-gray-300 hover:text-white text-sm font-medium transition
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-blue-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
+          >SERVICES</a>
 
-        <a href="#services" className="
-          relative
-          text-white
-          hover:text-white
-          after:content-['']
-          after:absolute
-          after:left-1/2
-          after:-translate-x-1/2
-          after:bottom-0
-          after:w-full
-          after:h-0.5
-          after:bg-white
-          after:scale-x-0
-          after:transition-transform
-          after:duration-300
-          hover:after:scale-x-100
-          "
-        >Services</a>
+          <a href="#about" className="relative text-gray-300 hover:text-white text-sm font-medium transition
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-blue-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
+          >ABOUT</a>
 
-        <a href="#about" className="
-          relative
-          text-white
-          hover:text-white
-          after:content-['']
-          after:absolute
-          after:left-1/2
-          after:-translate-x-1/2
-          after:bottom-0
-          after:w-full
-          after:h-0.5
-          after:bg-white
-          after:scale-x-0
-          after:transition-transform
-          after:duration-300
-          hover:after:scale-x-100
-          "
-        >About Me</a>
+          <a href="#contact" className="relative text-gray-300 hover:text-white text-sm font-medium transition
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-blue-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
+          >CONTACT</a>
 
-        <a href="#contact" className="
-          relative
-          text-white
-          hover:text-white
-          after:content-['']
-          after:absolute
-          after:left-1/2
-          after:-translate-x-1/2
-          after:bottom-0
-          after:w-full
-          after:h-0.5
-          after:bg-white
-          after:scale-x-0
-          after:transition-transform
-          after:duration-300
-          hover:after:scale-x-100
-          "
-        >Contact</a>
+          <a href="#" className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-all duration-300"
+          >LET'S TALK</a>
+        </nav>
 
-        <a href="#" className="
-          px-3.5
-          py-2
-          bg-[#004cff] 
-          font-bold
-          transition 
-          delay-150 
-          duration-75 
-          ease-in-out 
-          hover:bg-[#0034ac] 
-          hover: shadow-xl
-          text-white 
-          border-none 
-          rounded-full
-          "
-        >Let's talk</a>
-      </nav>
-
-      {isOpen && (
-      <div className="
-        md:hidden
-        flex
-        flex-col
-        items-center
-        gap-6
-        py-6
-        bg-[#000d2b]
-        uppercase
-      ">
-        <a href="#home" className="text-white" onClick={() => setIsOpen(false)}>Home</a>
-        <a href="#services" className="text-white" onClick={() => setIsOpen(false)}>Services</a>
-        <a href="#about" className="text-white" onClick={() => setIsOpen(false)}>About</a>
-        <a href="#contact" className="text-white" onClick={() => setIsOpen(false)}>Contact</a>
-
-        <a
-          href="#"
-          className="px-5 py-2 bg-[#004cff] text-white rounded-full font-bold"
-          onClick={() => setIsOpen(false)}
-        >
-          Let's talk
-        </a>
+        {/* Hamburger Menu - Right */}
+        <button onClick={() => setIsOpen(!isOpen)} className="text-white text-2xl md:hidden hover:text-gray-400 transition ml-auto">
+          {isOpen ? <MdClose /> : <MdMenu />}
+        </button>
       </div>
-      )}
-
     </header>
+
+    {/* Mobile Menu - Full Screen */}
+      <div className={`fixed inset-0 bg-black flex flex-col items-center justify-center px-6 md:hidden transition-transform duration-500 ease-in-out z-50 ${
+        isOpen ? 'translate-x-0' : 'translate-x-full'
+      }`}>
+        <button onClick={() => setIsOpen(false)} className="absolute top-6 right-6 text-white text-3xl hover:text-gray-400 transition">
+          <MdClose />
+        </button>
+        <a href="#home" className="text-gray-300 hover:text-white text-2xl font-medium transition py-4 w-full text-center" onClick={() => setIsOpen(false)}>HOME</a>
+        <a href="#services" className="text-gray-300 hover:text-white text-2xl font-medium transition py-4 w-full text-center" onClick={() => setIsOpen(false)}>SERVICES</a>
+        <a href="#about" className="text-gray-300 hover:text-white text-2xl font-medium transition py-4 w-full text-center" onClick={() => setIsOpen(false)}>ABOUT</a>
+        <a href="#contact" className="text-gray-300 hover:text-white text-2xl font-medium transition py-4 w-full text-center" onClick={() => setIsOpen(false)}>CONTACT</a>
+
+        <a href="#" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition mt-8 w-auto text-center" onClick={() => setIsOpen(false)}>LET'S TALK</a>
+      </div>
+    </>
   );
 }
 

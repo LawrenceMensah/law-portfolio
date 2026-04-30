@@ -1,4 +1,4 @@
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+﻿import { useTypewriter, Cursor } from "react-simple-typewriter";
 import heroImage from "./assets/MyImage.jpeg";
 import { FaWhatsapp, FaGithub, FaInstagram } from 'react-icons/fa';
 import { MdArrowForward } from "react-icons/md";
@@ -13,65 +13,55 @@ function Hero(){
 
 
   return(
-      <div id="home" className="
-        bg-gradient-to-r
-        from-[#002477] from-5%
-        via-[#001851] via-30%
-        to-[#000d2b] to-100%
-        scroll-mt-24
-        h-auto
-        flex
-        flex-col-reverse
-        md:flex-row
-        justify-center-safe
-        items-center-safe
-        gap-5
-        pt-20
-        p-10
-        ">
+      <div id="home" className="bg-black scroll-mt-24 h-auto flex flex-col-reverse md:flex-row justify-center items-center gap-12 pt-32 pb-20 px-6 md:px-20">
         
-          <div className="flex-col w-full md:w-1/2 p-3 ">
-            <span className="bg-[#2863ee48] py-1 px-2 text-[#ffffffb1] text-[10px] uppercase rounded-2xl mb-2">Lawrence Mensah</span>
+          <div className="flex-col w-full md:w-1/2">
+            <span className="inline-block bg-blue-500/10 border border-blue-500/40 py-2 px-4 text-blue-400 text-xs font-semibold uppercase rounded-full mb-6 hover:bg-blue-500/20 transition-all duration-300">Lawrence Mensah</span>
 
-            <h3 className="text-3xl text-white font-bold uppercase mb-1 text-center md:text-left">
+            <h3 className="text-lg text-gray-400 font-medium uppercase mb-3">
               Hi, I'm Lawrence
             </h3>
 
-            <h1 className="text-5xl text-white font-bold uppercase mb-4 text-center md:text-left">
+            <h1 className="text-5xl md:text-6xl text-white font-bold uppercase mb-6 leading-tight">
               I'm a
-              <span className="text-5xl text-[#004cff] font-bold uppercase">
+              <span className="text-5xl md:text-6xl text-blue-500 font-bold ml-3">
                 {text}
               </span>
-              <Cursor />
+              <Cursor cursorStyle="|" cursorColor="#3b82f6" />
             </h1>
 
             <div>
-
-              <p className="w-full md:w-130 text-[#ffffffd1] font-thin mb-5 text-center md:text-left">
-                Crafting digital experiences that work. I’m <strong>Mensah Lawrence</strong>, a <strong>Junior Front-end Developer</strong> focused on building clean, user-centric products that solve real-world problems.
+              <p className="text-gray-400 font-light mb-8 text-lg leading-relaxed">
+                Crafting digital experiences that work. I'm <span className="text-white font-semibold">Mensah Lawrence</span>, a <span className="text-white font-semibold">Junior Front-end Developer</span> focused on building clean, user-centric products that solve real-world problems.
               </p>
 
-              <div className="flex gap-5 flex-wrap justify-center-safe md:justify-start">
+              <div className="flex gap-6 flex-wrap justify-center md:justify-start items-center">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-7 rounded-lg flex justify-center items-center gap-2 font-semibold transition-all duration-300 group">
+                  Get In Touch <MdArrowForward size={18} className="group-hover:translate-x-1 transition" />
+                </button>
 
-                <button className="bg-[#004cff] text-[#fff] py-3 px-5 rounded-4xl flex  justify-center-safe items-center-safe gap-2 uppercase hover:bg-[#0034ac] hover:shadow-xl transition delay-150 duration-300 hover:translate-x-1">Get In Touch <MdArrowForward size={20} /></button>
+                <div className="flex gap-3">
+                  <a href="https://wa.me/0536901562" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
+                    <FaWhatsapp color="#fff" size={20}/>
+                  </a>
 
-                <span className="flex gap-2 justify-center-safe items-center-safe">
-                  <a href="https://wa.me/0536901562" target="_blank" className="bg-[#25D366] border-2 border-white h-10 w-10 rounded-full flex justify-center-safe items-center-safe transition delay-150 duration-300 hover:-translate-y-0.5"><FaWhatsapp color="#fff" className="text-1xl"/></a>
+                  <a href="https://github.com/LawrenceMensah" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
+                    <FaGithub color="#fff" size={20}/>
+                  </a>
 
-                  <a href="https://github.com/LawrenceMensah" target="_blank" className="bg-[#333] border-2 border-white h-10 w-10 rounded-full flex justify-center-safe items-center-safe transition delay-150 duration-300 hover:-translate-y-0.5"><FaGithub color="#fff" className="text-1xl"/></a>
-
-                  <a href="https://wa.me/0536901562" target="_blank" className="bg-[#C13584] border-2 border-white h-10 w-10 rounded-full flex justify-center-safe items-center-safe transition delay-150 duration-300 hover:-translate-y-0.5"> <FaInstagram color="#fff" className="text-1xl"/></a>
-
-                </span>
-
+                  <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
+                    <FaInstagram color="#fff" size={20}/>
+                  </a>
+                </div>
               </div>
-
             </div>
           </div>
 
-
-          <div className="">
-            <img src={heroImage} alt="" className="w-60 h-60 md:w-96 md:h-96 rounded-full border-8 border-[#004cff]"/>
+          <div className="flex-shrink-0">
+            <div className="relative w-60 h-60 md:w-96 md:h-96 group">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-blue-500/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
+              <img src={heroImage} alt="Lawrence Mensah" className="relative w-full h-full rounded-full border-2 border-blue-500/50 object-cover hover:border-blue-400 transition-all duration-300"/>
+            </div>
           </div>
       </div>
   );
