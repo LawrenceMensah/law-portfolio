@@ -4,7 +4,7 @@ import { FaWhatsapp, FaGithub, FaInstagram } from 'react-icons/fa';
 import { MdArrowForward } from "react-icons/md";
 
 
-function Hero(){
+function Hero({ darkMode }){
   const [text] = useTypewriter({
     words: [" Frontend Developer", " Designer", " UI/UX Designer"],
     loop: true,
@@ -13,16 +13,16 @@ function Hero(){
 
 
   return(
-      <div id="home" className="bg-black scroll-mt-24 h-auto flex flex-col-reverse md:flex-row justify-center items-center gap-12 pt-32 pb-20 px-6 md:px-20">
+      <div id="home" className={`scroll-mt-24 h-auto flex flex-col-reverse md:flex-row justify-center items-center gap-12 pt-32 pb-20 px-6 md:px-20 transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
         
           <div className="flex-col w-full md:w-1/2">
-            <span className="inline-block bg-blue-500/10 border border-blue-500/40 py-2 px-4 text-blue-400 text-xs font-semibold uppercase rounded-full mb-6 hover:bg-blue-500/20 transition-all duration-300">Lawrence Mensah</span>
+            <span className={`inline-block border py-2 px-4 text-xs font-semibold uppercase rounded-full mb-6 transition-all duration-300 ${darkMode ? 'bg-blue-500/10 border-blue-500/40 text-blue-400 hover:bg-blue-500/20' : 'bg-blue-100 border-blue-300 text-blue-700 hover:bg-blue-200'}`}>Lawrence Mensah</span>
 
-            <h3 className="text-lg text-gray-400 font-medium uppercase mb-3">
+            <h3 className={`text-lg font-medium uppercase mb-3 transition-colors duration-300 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               Hi, I'm Lawrence
             </h3>
 
-            <h1 className="text-5xl md:text-6xl text-white font-bold uppercase mb-6 leading-tight">
+            <h1 className={`text-5xl md:text-6xl font-bold uppercase mb-6 leading-tight transition-colors duration-300 ${darkMode ? 'text-white' : 'text-black'}`}>
               I'm a
               <span className="text-5xl md:text-6xl text-blue-500 font-bold ml-3">
                 {text}
@@ -31,25 +31,25 @@ function Hero(){
             </h1>
 
             <div>
-              <p className="text-gray-400 font-light mb-8 text-lg leading-relaxed">
-                Crafting digital experiences that work. I'm <span className="text-white font-semibold">Mensah Lawrence</span>, a <span className="text-white font-semibold">Junior Front-end Developer</span> focused on building clean, user-centric products that solve real-world problems.
+              <p className={`font-light mb-8 text-lg leading-relaxed transition-colors duration-300 ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+                Crafting digital experiences that work. I'm <span className={`font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>Mensah Lawrence</span>, a <span className={`font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>Junior Front-end Developer</span> focused on building clean, user-centric products that solve real-world problems.
               </p>
 
-              <div className="flex gap-4 md:gap-6 justify-center md:justify-start items-center">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center md:justify-start items-center">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-5 sm:px-7 rounded-lg flex justify-center items-center gap-2 font-semibold transition-all duration-300 group whitespace-nowrap">
                   Get In Touch <MdArrowForward size={18} className="group-hover:translate-x-1 transition" />
                 </button>
 
-                <div className="flex gap-2 sm:gap-3">
-                  <a href="https://wa.me/0536901562" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
+                <div className="flex gap-2 sm:gap-3 justify-center">
+                  <a href="https://wa.me/0536901562" target="_blank" rel="noreferrer" className="border h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110 bg-blue-600 border-blue-600 hover:bg-blue-700 hover:border-blue-700">
                     <FaWhatsapp color="#fff" size={20}/>
                   </a>
 
-                  <a href="https://github.com/LawrenceMensah" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
+                  <a href="https://github.com/LawrenceMensah" target="_blank" rel="noreferrer" className="border h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110 bg-blue-600 border-blue-600 hover:bg-blue-700 hover:border-blue-700">
                     <FaGithub color="#fff" size={20}/>
                   </a>
 
-                  <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="bg-gray-800 border border-gray-700 hover:bg-blue-600 hover:border-blue-600 h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110">
+                  <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="border h-11 w-11 rounded-lg flex justify-center items-center transition-all duration-300 hover:scale-110 bg-blue-600 border-blue-600 hover:bg-blue-700 hover:border-blue-700">
                     <FaInstagram color="#fff" size={20}/>
                   </a>
                 </div>

@@ -2,7 +2,7 @@ import heroImage from "./assets/MyImage.jpeg";
 import { MdStar, MdStarHalf, MdStarBorder } from "react-icons/md";
 
 
-function About(){
+function About({ darkMode }){
   const skills = [
     { name: "HTML5", category: "Frontend" },
     { name: "CSS3", category: "Frontend" },
@@ -16,11 +16,11 @@ function About(){
   ];
 
   return(
-      <div id="about" className="bg-black scroll-mt-24 h-auto py-20 px-6 md:px-20">
+      <div id="about" className={`scroll-mt-24 h-auto py-20 px-6 md:px-20 transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <h1 className="text-4xl md:text-5xl text-white font-bold uppercase mb-2">About Me</h1>
+            <h1 className={`text-4xl md:text-5xl font-bold uppercase mb-2 transition-colors duration-300 ${darkMode ? 'text-white' : 'text-black'}`}>About Me</h1>
             <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
           </div>
 
@@ -42,8 +42,8 @@ function About(){
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl text-blue-400 font-semibold uppercase mb-4">Who Am I</h2>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  I am a <span className="text-white font-semibold">BSc Information Technology student at UPSA</span>, focused on transforming complex theory into high-performance, real-world applications. I bridge the gap between academic study and practical software engineering to build robust, scalable, and user-optimized digital solutions.
+                <p className={`leading-relaxed text-lg transition-colors duration-300 ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+                  I am a <span className={`font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>BSc Information Technology student at UPSA</span>, focused on transforming complex theory into high-performance, real-world applications. I bridge the gap between academic study and practical software engineering to build robust, scalable, and user-optimized digital solutions.
                 </p>
               </div>
 
@@ -54,12 +54,12 @@ function About(){
                   {skills.map((skill, index) => (
                     <div 
                       key={index}
-                      className="bg-gray-900 border border-gray-800 hover:border-blue-500/50 rounded-lg p-3 sm:p-4 transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:shadow-blue-600/20 group cursor-pointer"
+                      className={`border rounded-lg p-3 sm:p-4 transition-all duration-300 group cursor-pointer ${darkMode ? 'bg-gray-900 border-gray-800 hover:border-blue-500/50 hover:bg-gray-800' : 'bg-gray-100 border-gray-300 hover:border-blue-500/50 hover:bg-blue-50'}`}
                     >
-                      <p className="text-white text-sm sm:text-base font-semibold group-hover:text-blue-400 transition-colors duration-300 break-words">
+                      <p className={`text-sm sm:text-base font-semibold break-words transition-colors duration-300 group-hover:text-blue-400 ${darkMode ? 'text-white' : 'text-black'}`}>
                         {skill.name}
                       </p>
-                      <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors duration-300">
+                      <p className={`text-xs mt-1 transition-colors duration-300 ${darkMode ? 'text-gray-500 group-hover:text-gray-400' : 'text-gray-600 group-hover:text-gray-500'}`}>
                         {skill.category}
                       </p>
                     </div>
