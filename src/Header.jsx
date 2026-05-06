@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MdMenu, MdClose, MdSunny, MdDarkMode } from "react-icons/md";
+import { MdArrowForward } from "react-icons/md";
 
 
 function Header({ darkMode, setDarkMode }){
@@ -30,31 +31,13 @@ function Header({ darkMode, setDarkMode }){
         `}>
       
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        {/* Left Side: Theme Toggle & Logo */}
-        <div className="flex items-center gap-4">
-          {/* Desktop Theme Toggle - Far Left */}
-          <div className="hidden md:flex">
-            <button 
-              onClick={() => setDarkMode(!darkMode)}
-              className={`p-2.5 rounded-lg transition-all duration-300 ${
-                darkMode 
-                  ? 'text-white hover:bg-gray-800' 
-                  : 'text-black hover:bg-gray-200'
-              }`}
-              title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {darkMode ? <MdSunny size={24} /> : <MdDarkMode size={24} />}
-            </button>
-          </div>
-
-          {/* Logo */}
-          <div className="flex-none">
-            <a href="#" className="flex items-center">
-              <h1 className={`text-3xl font-black tracking-tight ${darkMode ? 'text-white' : 'text-black'}`}>
-                Lawre<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">X</span>
-              </h1>
-            </a>
-          </div>
+        {/* Left Side: Logo Only */}
+        <div className="flex-none">
+          <a href="#" className="flex items-center">
+            <h1 className={`text-3xl font-black tracking-tight ${darkMode ? 'text-white' : 'text-black'}`}>
+              Lawre<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">X</span>
+            </h1>
+          </a>
         </div>
 
         {/* Desktop Navigation - Center */}
@@ -81,23 +64,31 @@ function Header({ darkMode, setDarkMode }){
               : 'text-gray-600 hover:text-black after:bg-blue-500'
           }
             after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100`}
-          >ABOUT</a>
-
-          <a href="#contact" className={`relative text-sm font-medium transition ${
-            darkMode 
-              ? 'text-gray-300 hover:text-white after:bg-blue-500' 
-              : 'text-gray-600 hover:text-black after:bg-blue-500'
-          }
-            after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100`}
           >CONTACT</a>
 
           <a href="#" className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-all duration-300"
           >LET'S TALK</a>
         </nav>
 
+        {/* Right Side: Theme Toggle Only */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Desktop Theme Toggle */}
+          <button 
+            onClick={() => setDarkMode(!darkMode)}
+            className={`p-2.5 rounded-lg transition-all duration-300 ${
+              darkMode 
+                ? 'text-white hover:bg-gray-800' 
+                : 'text-black hover:bg-gray-200'
+            }`}
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {darkMode ? <MdSunny size={24} /> : <MdDarkMode size={24} />}
+          </button>
+        </div>
+
         {/* Mobile Controls - Right */}
         <div className="flex md:hidden items-center gap-3">
-          {/* Mobile Theme Toggle - Left of Hamburger */}
+          {/* Mobile Theme Toggle */}
           <button 
             onClick={() => setDarkMode(!darkMode)}
             className={`p-2 rounded-lg transition-all duration-300 ${
@@ -132,6 +123,7 @@ function Header({ darkMode, setDarkMode }){
         <a href="#about" className={`text-2xl font-medium transition py-4 w-full text-center ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-black'}`} onClick={() => setIsOpen(false)}>ABOUT</a>
         <a href="#contact" className={`text-2xl font-medium transition py-4 w-full text-center ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-black'}`} onClick={() => setIsOpen(false)}>CONTACT</a>
 
+        {/* Mobile LET'S TALK Button */}
         <a href="#" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition mt-8 w-auto text-center" onClick={() => setIsOpen(false)}>LET'S TALK</a>
       </div>
     </>
