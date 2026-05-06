@@ -35,7 +35,7 @@ function Hero({ darkMode }){
                 Crafting digital experiences that work. I'm <span className={`font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>Mensah Lawrence</span>, a <span className={`font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>Junior Front-end Developer</span> focused on building clean, user-centric products that solve real-world problems.
               </p>
 
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-start items-start">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-start items-center">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-5 sm:px-7 rounded-lg flex justify-center items-center gap-2 font-semibold transition-all duration-300 group whitespace-nowrap">
                   Get In Touch <MdArrowForward size={18} className="group-hover:translate-x-1 transition" />
                 </button>
